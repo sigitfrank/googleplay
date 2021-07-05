@@ -25,6 +25,9 @@ app.use(session({
         expires: new Date(Date.now() + (1 * 86400 * 1000)) //expires in a day
     }
 }))
+app.get('/', (req, res) => {
+    res.send('Hello World')
+})
 app.get('/android', async (req, res) => {
     const response = await gplay.app({ appId: 'astronacci.aclub' })
     const { maxInstalls, ratings, size, reviews, released, scoreText } = response
