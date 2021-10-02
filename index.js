@@ -40,6 +40,4 @@ app.get('/apple', async (req, res) => {
     res.status(200).json({ success: true, data: { contentRating, formattedSize } })
 })
 
-app.listen(5000, () => {
-    console.log(`App Running on port 5000`)
-})
+app.listen()
